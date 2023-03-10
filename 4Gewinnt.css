@@ -1,3 +1,17 @@
-html{
-    background-color: rgb(red, green, blue);
+table {
+    font-family: Helvetica;
+
+}
+
+table {
+    border: 1px solid;
+}
+
+#spielfeld {
+    width: 200px;
+    margin: auto;
+}
+
+#spielfeld td {
+    text-align: center;
 }
