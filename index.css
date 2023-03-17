@@ -1,21 +1,22 @@
-body {
-    background-image:  url('https://giphy.com/gifs/fcbayern-audi-coutinho-philippe-ZYKOOXkyHETp2VcS94');
-    height: 900px;
-  }
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 h1 {
     font-size: 25px;
     text-align: center;
-    font-family: Helvetica;
+    color: white;
+    text-decoration: underline;
 }
 
-.text1{
-    text-transform: lowercase;
+.text1{   
+    text-transform: capitalize;
     background-image: linear-gradient(
         -225deg,
         #231557 0%,
-        #44107a 29%,
-        #ff1361 67%,
-        #fff800 100%
+        #9e77c8 29%,
+        #17d9e0 67%,
+        #19059c 100%
     );
     background-size: auto auto;
     background-clip: border-box;
@@ -37,28 +38,67 @@ h1 {
 #spiele {
     font-size: 25px;
     text-align: center;
-    font-family: Helvetica;
 }
 #b4 {
     text-align: center;
-    font-family: Helvetica;
 }
 button {
     transition-duration: 0.4s;
-    background-color: #ffffff;
-    border: none;
-    color: black;
-    padding: 15px 32px;
+    background-color: #ffffff00;
+    border-radius: 12.5px;
+    color: rgb(255, 255, 255);
+    padding: 15px 16px;
     text-align: center;
     display: inline-block;
+    font-weight: lighter;
     font-size: 16px;
     margin: 4px 2px;
-    border: 2px solid #000;
-    cursor: pointer;
+    border: 2.5px solid rgb(80, 23, 215);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 button:hover {
-    background-color: rgb(97, 218, 70);
+    background-color: rgb(80, 23, 215);
     font-size: large;
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+
 }
