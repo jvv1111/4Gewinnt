@@ -1,17 +1,14 @@
 table {
+    background-color: rgba(129, 127, 127, 0.89);
     font-family: Helvetica;
-
-}
-
-table {
-    border: 1px solid;
+    border: 20px solid;
+    border-style: ridge;
+    border-color: black;
 }
 
 #spielfeld {
-    width: 200px;
+    width: 500px;
     margin: auto;
-}
-
-#spielfeld td {
-    text-align: center;
+    padding: 400px;
+    
 }
