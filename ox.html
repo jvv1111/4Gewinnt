@@ -2,59 +2,66 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="ox.css">
     <title>ox</title>
+    <!--Verlinkung; css-->
+    <link rel="stylesheet" href="ox.css">
+    <!--Verlinkung; js-->
+    <script src="ox.js"></script>
 </head>
 
 <body id="bg">
-    <h1>Tic Tac Toe | O X</h1>
+    <h1 class="game-title">Tic Tac Toe | O X</h1>
     <div style="border: 2px solid aliceblue"></div>
     <p></p>
     <!--Anfang; Spielfeld-->
-    <div id="spielfeld">
-        <table class="center">
-            <thead>
-            </thead>
-            <tbody>
-                <tr>
-                    <td onclick="alert('x')">,</td>
-                    <td>,</td>
-                    <td>,</td>
-                </tr>
-                <tr>
-                    <td>,</td>
-                    <td>,</td>
-                    <td>,</td>
-                </tr>
-                <tr>
-                    <td>,</td>
-                    <td>,</td>
-                    <td>,</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <p></p>
-    <div style="border: 2px solid aliceblue"></div>
-    <p></p>
-    <!--Legende; Spieler-->
-    <div id="legende">
-        <table class="center">
-            <tr>
-                <td>SPIELER 1</td>
-                <td>-</td>
-                <td>SPIELER 2</td>
-            </tr>
-            <tr>
-                <td><p></p></td>
-            </tr>
-            <tr>
-                <td><img src= o.png alt="O"></td>
-                <td></td>
-                <td><img src= x.png alt="X"></td>
-            </tr>
-        </table>
-    </div>
+    <section>
+        <div class="game-container">
+            <table class="center">
+                    <tr>
+                        <td><div data-cell-index="O" class="cell"></div></td>
+                        <td><div data-cell-index="1" class="cell"></div></td>
+                        <td><div data-cell-index="2" class="cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td><div data-cell-index="3" class="cell"></div></td>
+                        <td><div data-cell-index="4" class="cell"></div></td>
+                        <td><div data-cell-index="5" class="cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td><div data-cell-index="6" class="cell"></div></td>
+                        <td><div data-cell-index="7" class="cell"></div></td>
+                        <td><div data-cell-index="8" class="cell"></div></td>
+                    </tr>
+            </table>
+        </div>
+        <p></p>
+        <!--border-->
+        <div style="border: 2px solid aliceblue"></div>
+        <p></p>
+        <!--Legende; Spieler-->
+            <div id="legende">
+                <table class="center">
+                    <tr>
+                        <td>PLAYER 1</td>
+                        <td>-</td>
+                        <td>PLAYER 2</td>
+                    </tr>
+                    <tr>
+                        <td><p></p></td>
+                    </tr>
+                    <tr>
+                        <td><img src= o.png alt="O"></td>
+                        <td></td>
+                        <td><img src= x.png alt="X"></td>
+                    </tr>
+                </table>
+            </div>
+        <!--game status-->
+        <h2 class="game--status"></h2>
+        <!--restart button-->
+        <button class="game-restart">Restart Game</button>
+    </section>
+    <script src="ox.js"></script>
 </body>
 
 </html>
