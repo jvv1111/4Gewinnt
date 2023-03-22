@@ -10,16 +10,15 @@
 </head>
 
 <body id="bg">
-    <h1 class="game-title">Tic Tac Toe | O X</h1>
-    <div style="border: 2px solid aliceblue"></div>
-    <p></p>
+    <h1 class="game-title">Tic Tac Toe</h1>
+    <marquee direction="right"><h>XOXO</h></marquee>
     <!--Anfang; Spielfeld-->
     <section>
         <div class="game-container">
             <table class="center">
                     <tr>
-                        <td><div data-cell-index="O" class="cell"></div></td>
-                        <td><div data-cell-index="1" class="cell"></div></td>
+                        <td><div data-cell-index="O" class="cell"><img src= o.png alt="O"></div></td>
+                        <td><div data-cell-index="1" class="cell"><img src= x.png alt="X"></div></td>
                         <td><div data-cell-index="2" class="cell"></div></td>
                     </tr>
                     <tr>
@@ -35,33 +34,31 @@
             </table>
         </div>
         <p></p>
-        <!--border-->
-        <div style="border: 2px solid aliceblue"></div>
-        <p></p>
         <!--Legende; Spieler-->
-            <div id="legende">
-                <table class="center">
-                    <tr>
-                        <td>PLAYER 1</td>
-                        <td>-</td>
-                        <td>PLAYER 2</td>
-                    </tr>
-                    <tr>
-                        <td><p></p></td>
-                    </tr>
-                    <tr>
-                        <td><img src= o.png alt="O"></td>
-                        <td></td>
-                        <td><img src= x.png alt="X"></td>
-                    </tr>
-                </table>
-            </div>
+        <div id="legende">
+            <table class="center">
+                <tr>
+                    <td>PLAYER <h3>1</h3></td>
+                    <td><h4>-</h4></td>
+                    <td>PLAYER <h3>2</h3></td>
+                </tr>
+                <tr>
+                    <td><p></p></td>
+                </tr>
+                <tr>
+                    <td><img src= o.png alt="O"></td>
+                    <td></td>
+                    <td><img src= x.png alt="X"></td>
+                </tr>
+            </table>
+        </div>
+
         <!--game status-->
-        <h2 class="game--status"></h2>
+        <h2 class="game-status"></h2>
+
         <!--restart button-->
         <button class="game-restart">Restart Game</button>
     </section>
-    <script src="ox.js"></script>
 </body>
 
 </html>
