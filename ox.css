@@ -1,30 +1,46 @@
-#spielfeld {
-    font-size: 150px;
-    text-align: center;
+.tic-tac-toe #gameboard {
+    width: 60vmin;
+    height: 60vmin;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+.tic-tac-toe button {
+    width:20vmin;
+    height: 20vmin;
+    background: rgb(9, 59, 42);
+    border: 1px solid black;
+    margin: 0;
+    font: 0/0 transparent;
+    width: 250px;
+    height: 250px;
+    box-shadow: 2px 2px 2px 2px rgb(40, 85, 70);
+    border: 2px solid rgb(107, 134, 115);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+button:hover {
+    background: rgb(107, 134, 115);
 }
 
-body {
-    background-color: rgb(9, 59, 42);
-    font-family: Georgia, 'Times New Roman', Times, serif ;
-    text-align: center;
-}
-
-tr {
-    font-size: 25px;
-    width: 20%;
-}
-
-td {
-    color: aliceblue;
-    width: 20%;
-}
+.tic-tac-toe [aria-label="x"] {
+      background-image: url('x.png');
+  }
+  
+.tic-tac-toe [aria-label="o"]{
+      background-image: url('o.png');
+  }
 
 #legende {
     font-size: 150px;
     text-align: center;
-}
-
-.center{
     margin-left: auto;
     margin-right: auto;
 }
@@ -34,39 +50,21 @@ img {
     width: 150px;
 }
 
-section {
-    text-align: center; 
-}
-
 .game-title {
     font-size: 150px;
     color: aliceblue;
     margin: 10px auto;
 }
 
-.game-container {
-    display: flex;
-    justify-content: center;
-    width: 306px;
-    margin: 10px auto;
-    color:rgb(255, 255, 255);
-}
-
-.cell {
-    width: 250px;
-    height: 250px;
-    box-shadow: 2px 2px 2px 2px rgb(40, 85, 70);
-    border: 2px solid rgb(107, 134, 115);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.game-status {
+p {
     font-size: 20px;
-    color: rgb(107, 134, 115);
+    color: aliceblue;
     margin: 20px auto;
+    background-color: rgb(107, 134, 115);
+}
+
+p:hover {
+    color: rgb(14, 27, 18);
 }
 
 .game-restart {
@@ -81,7 +79,42 @@ section {
     border: 0px solid;
 }
 
+
 h {
     color: rgb(107, 134, 115);
     font-size: 50px;
+}
+
+body {
+    background-color: rgb(9, 59, 42);
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+    text-align: center;
+}
+
+td {
+    color: aliceblue;
+    width: 20%;
+}
+
+tr {
+    font-size: 25px;
+    width: 20%;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+marquee {
+    width: 30%;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(17, 0, 255);
 }
