@@ -30,12 +30,12 @@ button:hover {
     background: rgb(107, 134, 115);
 }
 
-.tic-tac-toe [aria-label="x"] {
+.tic-tac-toe [aria-label="X"] {
     background-image: url('x.png');
     background-size: cover;
 }
 
-.tic-tac-toe [aria-label="o"] {
+.tic-tac-toe [aria-label="O"] {
     background-image: url('o.png');
     background-size: cover;
 }
@@ -103,7 +103,7 @@ table {
 }
 
 marquee {
-    width: 30%;
+    width: 5%;
     color: rgb(107, 134, 115);
     font-size: 50px;
     cursor: pointer;
