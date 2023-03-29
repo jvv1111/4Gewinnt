@@ -7,7 +7,7 @@ restartButton.addEventListener('click', function () {
 const gameboard = document.getElementById('gameboard');
 gameboard.addEventListener('click', markField);
 
-let currentPlayer = 'x';
+let currentPlayer = 'X';
 const currentPlayerElement = document.getElementById('currentPlayer');
 function markField(e) {
     var field = e.target;
@@ -15,19 +15,29 @@ function markField(e) {
         return;
     }
     field.setAttribute('aria-label', currentPlayer);
-    if (currentPlayer === 'x'){
-        currentPlayer = 'o';
+    field.setAttribute('disabled', 'disabled');
+    if (playerHasWon()){
+        console.log(`${currentPlayer} has won!`);
+        currentPlayerElement.textContent = `${currentPlayer} has won!`;
+        return;
+    }
+    
+    if (currentPlayer === 'X'){
+        currentPlayer = 'O';
         currentPlayerElement.textContent = "O's turn";
     } else {
-        currentPlayer = 'x';
+        currentPlayer = 'X';
         currentPlayerElement.textContent = "X's turn";
     }
-
-    field.setAttribute('disabled', 'disabled');
+    
 }
 
-let xoxo = document.getElementById('xoxo');
-xoxo.addEventListener('click', function () {
+function playerHasWon(){
+    // TO DO
+    return false;
+}
+
+function nervig() {
     if (xoxo.textContent === '📲') {
         xoxo.textContent = '💩';
         xoxo.direction = 'left';
@@ -43,9 +53,75 @@ xoxo.addEventListener('click', function () {
     } else if (xoxo.textContent === '💟'){
         xoxo.textContent = '💌';
         xoxo.direction = 'right';
+    } else if (xoxo.textContent === '💌'){
+        xoxo.textContent = '💞';
+        xoxo.direction = 'up';
+    } else if (xoxo.textContent === '💞'){
+        xoxo.textContent = '💚';
+        xoxo.direction = 'right';
+    } else if (xoxo.textContent === '💚'){
+        xoxo.textContent = '💥';
+        xoxo.direction = 'left';
+    } else if (xoxo.textContent === '💥'){
+        xoxo.textContent = '💫';
+        xoxo.direction = 'left';
+    } else if (xoxo.textContent === '💫'){
+        xoxo.textContent = '💤';
+        xoxo.direction = 'right';
+    } else if (xoxo.textContent === '💤'){
+        xoxo.textContent = '💅';
+        xoxo.direction = 'up';
+    } else if (xoxo.textContent === '💅'){
+        xoxo.textContent = '🧠';
+        xoxo.direction = 'down';
+    } else if (xoxo.textContent === '🧠'){
+        xoxo.textContent = '👩‍💻';
+        xoxo.direction = 'left';
+    } else if (xoxo.textContent === '👩‍💻'){
+        xoxo.direction = 'up';
+        xoxo.textContent = '🤸';
+    } else if (xoxo.textContent === '🤸'){
+        xoxo.textContent = '👥';
+        xoxo.direction = 'right';
+    } else if (xoxo.textContent === '👥'){
+        xoxo.textContent = '🐷';
+        xoxo.direction = 'left';
+    } else if (xoxo.textContent === '🐷'){
+        xoxo.textContent = '🐣';
+        xoxo.direction = 'right';
+    } else if (xoxo.textContent === '🐣'){
+        xoxo.textContent = '🦚';
+        xoxo.direction = 'up';
+    } else if (xoxo.textContent === '🦚'){
+        xoxo.textContent = '🐸';
+        xoxo.direction = 'down';
+    } else if (xoxo.textContent === '🐸'){
+        xoxo.textContent = '🐞';
+        xoxo.direction = 'left';
+    } else if (xoxo.textContent === '🐞'){
+        xoxo.textContent = '🌸';
+        xoxo.direction = 'left';
+    } else if (xoxo.textContent === '🌸'){
+        xoxo.textContent = '🍩';
+        xoxo.direction = 'right';
+    } else if (xoxo.textContent === '🍩'){
+        xoxo.textContent = '🌺';
+        xoxo.direction = 'up';
+    } else if (xoxo.textContent === '🌺'){
+        xoxo.textContent = '🧃';
+        xoxo.direction = 'down';
+    } else if (xoxo.textContent === '🧃'){
+        xoxo.textContent = '🗽';
+        xoxo.direction = 'down';
     } else {
         xoxo.textContent = '📲' ;
-        xoxo.direction = 'down';
+        xoxo.direction = 'right';
     }
-});
+}
 
+let xoxo = document.getElementById('xoxo');
+xoxo.addEventListener('click', nervig);
+
+setTimeout(function(){
+    setInterval(nervig , 100);
+} , 3500);
