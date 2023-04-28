@@ -11,85 +11,89 @@
 
     <!--Titel-->
     <title>4Gewinnt</title>
+
+    <script src="4Gewinnt.js" defer></script>
+
 </head>
 
 <body>
     <!--Anfang des Spielfelds grober Aufbau-->
     <div id="spielfeld">
+        <h1 id ="spieler">Speiler 1 ist dran</h1>
         <table>
             <thead>
                 <tr class="dreieck">
-                    <th>&#128315;&#xfe0e;</th>
-                    <th>&#128315;&#xfe0e;</th>
-                    <th>&#128315;&#xfe0e;</th>
-                    <th>&#128315;&#xfe0e;</th>
-                    <th>&#128315;&#xfe0e;</th>
-                    <th>&#128315;&#xfe0e;</th>
-                    <th>&#128315;&#xfe0e;</th>
+                    <th id="dreieck1">&#128315;&#xfe0e;</th>
+                    <th id="dreieck2">&#128315;&#xfe0e;</th>
+                    <th id="dreieck3">&#128315;&#xfe0e;</th>
+                    <th id="dreieck4">&#128315;&#xfe0e;</th>
+                    <th id="dreieck5">&#128315;&#xfe0e;</th>
+                    <th id="dreieck6">&#128315;&#xfe0e;</th>
+                    <th id="dreieck7">&#128315;&#xfe0e;</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
+                <tr id="reihe1">
+                    <td><img id="arr5" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr11" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr17" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr23" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr29" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr35" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr41" src="kreis_nichts.png" width="60" height="60"></td>
                 </tr>
                 <!--Reihe 2-->
-                <tr>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
+                <tr id="reihe2">
+                    <td><img id="arr4" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr10" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr16" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr22" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr28" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr34" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr40" src="kreis_nichts.png" width="60" height="60"></td>
                 </tr>
                 <!--Reihe 3-->
-                <tr>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
+                <tr id="reihe3">
+                    <td><img id="arr3" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr9" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr15" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr21" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr27" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr33" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr39" src="kreis_nichts.png" width="60" height="60"></td>
                 </tr>
 
                 <!--Reihe 4-->
-                <tr>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
+                <tr id="reihe4">
+                    <td><img id="arr2" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr8" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr14" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr20" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr26" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr32" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr38" src="kreis_nichts.png" width="60" height="60"></td>
                 </tr>
 
                 <!--Reihe 5-->
-                <tr>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
+                <tr id="reihe5">
+                    <td><img id="arr1" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr7" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr13" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr19" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr25" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr31" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr37" src="kreis_nichts.png" width="60" height="60"></td>
                 </tr>
 
                 <!--Reihe 6-->
-                <tr>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img src="kreis_gelb.png" width="60" height="60"></td>
-                    <td><img src="kreis_rot.png" width="60" height="60"></td>
+                <tr id="reihe6">
+                    <td><img id="arr0" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr6" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr12" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr18" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr24" src="kreis_nichts.png" width="60" height="60"></td>
+                    <td><img id="arr30" src="kreis_gelb.png" width="60" height="60"></td>
+                    <td><img id="arr36" src="kreis_rot.png" width="60" height="60"></td>
                 </tr>
             </tbody>
         </table>
