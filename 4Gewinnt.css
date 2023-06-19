@@ -12,6 +12,10 @@ table {
     padding: 400px;
 }
 
-tr.dreieck {
+tr.dreieck th {
     font-size: 25px;
+}
+
+.spalte-deaktiviert {
+    cursor: not-allowed;
 }
