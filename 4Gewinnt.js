@@ -143,3 +143,27 @@ function gewinnMöglichkeiten(spielfeld, spielerBild) {
 function hatSpielerFeldBelegt(index, spielerBild) {
     return document.getElementById(spielfeld[index]).getAttribute("src") === spielerBild;
 }
+
+// jad's code
+
+// Neustart-Button
+const neustartButton = document.getElementById("neustartButton");
+neustartButton.addEventListener("click", neuesSpiel);
+
+function neuesSpiel() {
+  // Zurücksetzen des Spielfelds
+  for (let i = 0; i < spielfeld.length; i++) {
+    const element = document.getElementById(spielfeld[i]);
+    element.setAttribute("src", "kreis_nichts.png");
+  }
+
+  // Zurücksetzen des Spieler-Texts
+  spieler.textContent = "Spieler 1 ist dran";
+
+  // Zurücksetzen der deaktivierten Spalten
+  const spalten = document.getElementsByClassName("spalte-deaktiviert");
+  for (let i = spalten.length - 1; i >= 0; i--) {
+    spalten[i].classList.remove("spalte-deaktiviert");
+  }
+}
+
