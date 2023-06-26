@@ -7,6 +7,7 @@ body {
     margin: auto;
     margin-top: 50px;
     text-align: center;
+    user-select: none;
 }
 
 h1#spieler {
@@ -28,6 +29,11 @@ tr.dreieck th {
     font-size: 25px;
     color: #fff;
     padding: 10px;
+    cursor: pointer;
+}
+
+tr.dreieck th.spalte-deaktiviert {
+    cursor: not-allowed;
 }
 
 td {
@@ -63,15 +69,19 @@ img {
     0% {
         transform: translateY(0);
     }
+
     25% {
         transform: translateY(-20px);
     }
+
     50% {
         transform: translateY(0);
     }
+
     75% {
         transform: translateY(-10px);
     }
+
     100% {
         transform: translateY(0);
     }
