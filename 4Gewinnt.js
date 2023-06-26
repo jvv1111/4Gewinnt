@@ -1,3 +1,4 @@
+//Maliks Code:
 const spielfeld = ["arr0", "arr1", "arr2", "arr3", "arr4", "arr5", "arr6", "arr7", "arr8", "arr9", "arr10", "arr11", "arr12", "arr13",
     "arr14", "arr15", "arr16", "arr17", "arr18", "arr19", "arr20", "arr21", "arr22", "arr23", "arr24", "arr25", "arr26", "arr27", "arr28",
     "arr29", "arr30", "arr31", "arr32", "arr33", "arr34", "arr35", "arr36", "arr37", "arr38", "arr39", "arr40", "arr41"];
@@ -29,7 +30,6 @@ document.getElementById("dreieck5").addEventListener("click", () => setzeSpalte(
 document.getElementById("dreieck6").addEventListener("click", () => setzeSpalte(6));
 
 document.getElementById("dreieck7").addEventListener("click", () => setzeSpalte(7));
-
 
 const spieler = document.getElementById("spieler");
 
@@ -65,6 +65,7 @@ function setzeSpalte(spalte) {
         const dreieckId = "dreieck" + spalte;
         const dreieck = document.getElementById(dreieckId);
         dreieck.classList.add("spalte-deaktiviert");
+        pruefeUnentschieden();
     }
 }
 
@@ -144,7 +145,7 @@ function hatSpielerFeldBelegt(index, spielerBild) {
     return document.getElementById(spielfeld[index]).getAttribute("src") === spielerBild;
 }
 
-// Jad's hinzugefügter Code
+// jad's code
 
 // Neustart-Button
 const neustartButton = document.getElementById("neustartButton");
@@ -167,43 +168,9 @@ function neuesSpiel() {
   }
 }
 
-function setzeSpalte(spalte) {
-    const index = (spalte - 1) * 6;
-    const frei = freierIndex(spielfeld, index);
-  
-    if (frei === -1) {
-      const dreieckId = "dreieck" + spalte;
-      const dreieck = document.getElementById(dreieckId);
-      dreieck.classList.add("spalte-deaktiviert");
-      pruefeUnentschieden();
-      return;
-    }
-  
-    const element = document.getElementById(spielfeld[frei]);
-  
-    if (spieler.textContent === "Spieler 1 ist dran") {
-      element.setAttribute(`src`, `kreis_rot.png`);
-      if (gewinnMöglichkeiten(spielfeld, "kreis_rot.png")) {
-        spieler.textContent = "SP1 GEWONNEN";
-        return;
-      }
-      spieler.textContent = "Spieler 2 ist dran";
-    } else if (spieler.textContent === "Spieler 2 ist dran") {
-      element.setAttribute(`src`, `kreis_gelb.png`);
-      if (gewinnMöglichkeiten(spielfeld, `kreis_gelb.png`)) {
-        spieler.textContent = "SP2 GEWONNEN";
-        return;
-      }
-      spieler.textContent = "Spieler 1 ist dran";
-    }
-  
-    pruefeUnentschieden();
+function pruefeUnentschieden() {
+  const alleSpaltenDeaktiviert = document.getElementsByClassName("spalte-deaktiviert").length === 7;
+  if (alleSpaltenDeaktiviert) {
+    spieler.textContent = "Unentschieden";
   }
-  
-  function pruefeUnentschieden() {
-    const alleSpaltenDeaktiviert = document.getElementsByClassName("spalte-deaktiviert").length === 7;
-    if (alleSpaltenDeaktiviert) {
-      spieler.textContent = "Unentschieden";
-    }
-  }
-  
+}
