@@ -7,3 +7,5 @@
 <p>Grafische Oberfläche für OX fertig grstellt yayyyyyyyy -stella</p>
 <p>jajajajajjajajaj</p>
 <p>löweeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee<p/>
+
+Habe in den letzen Tagen einen funktionierenden Neustart Button programmiert, eine Unentschieden Funktion und das Spielfeld ein neues Design gegeben - Jad
