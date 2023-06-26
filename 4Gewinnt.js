@@ -46,13 +46,16 @@ function setzeSpalte(spalte) {
     const element = document.getElementById(spielfeld[frei]);
 
     if (spieler.textContent === "Spieler 1 ist dran") {
+        ("tr.dreieck th.sp1Dran");
         element.setAttribute(`src`, `kreis_rot.png`);
         if (gewinnMöglichkeiten(spielfeld, "kreis_rot.png")) {
             spieler.textContent = "SP1 GEWONNEN";
             return;
         }
         spieler.textContent = "Spieler 2 ist dran";
+
     } else if (spieler.textContent === "Spieler 2 ist dran") {
+        ("tr.dreieck th.sp2Dran");
         element.setAttribute(`src`, `kreis_gelb.png`);
         if (gewinnMöglichkeiten(spielfeld, `kreis_gelb.png`)) {
             spieler.textContent = "SP2 GEWONNEN";
