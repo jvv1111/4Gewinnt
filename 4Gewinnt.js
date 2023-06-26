@@ -144,7 +144,7 @@ function hatSpielerFeldBelegt(index, spielerBild) {
     return document.getElementById(spielfeld[index]).getAttribute("src") === spielerBild;
 }
 
-// jad's code
+// Jad's hinzugefügter Code
 
 // Neustart-Button
 const neustartButton = document.getElementById("neustartButton");
@@ -167,3 +167,43 @@ function neuesSpiel() {
   }
 }
 
+function setzeSpalte(spalte) {
+    const index = (spalte - 1) * 6;
+    const frei = freierIndex(spielfeld, index);
+  
+    if (frei === -1) {
+      const dreieckId = "dreieck" + spalte;
+      const dreieck = document.getElementById(dreieckId);
+      dreieck.classList.add("spalte-deaktiviert");
+      pruefeUnentschieden();
+      return;
+    }
+  
+    const element = document.getElementById(spielfeld[frei]);
+  
+    if (spieler.textContent === "Spieler 1 ist dran") {
+      element.setAttribute(`src`, `kreis_rot.png`);
+      if (gewinnMöglichkeiten(spielfeld, "kreis_rot.png")) {
+        spieler.textContent = "SP1 GEWONNEN";
+        return;
+      }
+      spieler.textContent = "Spieler 2 ist dran";
+    } else if (spieler.textContent === "Spieler 2 ist dran") {
+      element.setAttribute(`src`, `kreis_gelb.png`);
+      if (gewinnMöglichkeiten(spielfeld, `kreis_gelb.png`)) {
+        spieler.textContent = "SP2 GEWONNEN";
+        return;
+      }
+      spieler.textContent = "Spieler 1 ist dran";
+    }
+  
+    pruefeUnentschieden();
+  }
+  
+  function pruefeUnentschieden() {
+    const alleSpaltenDeaktiviert = document.getElementsByClassName("spalte-deaktiviert").length === 7;
+    if (alleSpaltenDeaktiviert) {
+      spieler.textContent = "Unentschieden";
+    }
+  }
+  
