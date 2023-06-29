@@ -12,7 +12,6 @@ body {
     border-style: groove;
     border-color: #0ebee1;
     background-color: #0a5479;
-    transform: translateY(-74px); /*Ändernnn*/
 }
 
 h1#spieler {
@@ -39,6 +38,7 @@ table {
     border: 10px solid #0a5479;
     border-radius: 10px;
     margin: 0 auto;
+    transform: translateY(-50px);
 }
 
 element.style {
@@ -71,7 +71,7 @@ img {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 25px;
     font-weight: bold;
     background-color: #0ebee1;
@@ -110,9 +110,3 @@ img {
 }
 
 /* Wende die Bounce-Animation auf die Spielsteinbilder an */
-td img {
-    animation-name: bounce;
-    animation-duration: 0.5s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-}
