@@ -90,7 +90,7 @@ function gewinnMöglichkeiten(spielfeld, spielerBild) {
             return true;
         }
     }
-
+                                                                                          
     /*gewinnerDiagonal*/
     if (hatSpielerFeldBelegt(0, spielerBild) && hatSpielerFeldBelegt(7, spielerBild) && hatSpielerFeldBelegt(14, spielerBild) && hatSpielerFeldBelegt(21, spielerBild)) {
         return true;
