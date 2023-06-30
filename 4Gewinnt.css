@@ -1,111 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
+body {
+    background-color: #f2f2f2;
+}
 
-<head>
-    <!--Einbindung der css datei-->
-    <link rel="stylesheet" href="4Gewinnt.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Ende der css datei-->
+#spielfeld {
+    width: 600px;
+    margin: auto;
+    margin-top: 500px;
+    text-align: center;
+    user-select: none;
+    border-radius: 50px;
+    border-style: groove;
+    border-color: #0ebee1;
+    background-color: #0a5479;
+}
 
-    <!--Titel-->
-    <title>4Gewinnt</title>
+h1#spieler {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 100px;
+    color: white;
+}
 
-    <script src="4Gewinnt.js" defer></script>
+tr.dreieck th.sp1Dran {
+    caret-color: yellow;
+    cursor: yellow;
+}
 
-</head>
+tr.dreieck th.sp2Dran{
+    caret-color: red;
+    cursor: red;
+}
 
-<body>
-    <!--Anfang des Spielfelds grober Aufbau-->
-    <div id="spielfeld">
-        <h1 id ="spieler">Spieler 1 ist dran</h1>
-        <table>
-            <thead>
-                <tr class="dreieck">
-                    <th id="dreieck1">&#128315;&#xfe0e;</th>
-                    <th id="dreieck2">&#128315;&#xfe0e;</th>
-                    <th id="dreieck3">&#128315;&#xfe0e;</th>
-                    <th id="dreieck4">&#128315;&#xfe0e;</th>
-                    <th id="dreieck5">&#128315;&#xfe0e;</th>
-                    <th id="dreieck6">&#128315;&#xfe0e;</th>
-                    <th id="dreieck7">&#128315;&#xfe0e;</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!--Reihe 1-->
-                <tr id="reihe1">
-                    <td><img id="arr5" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr11" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr17" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr23" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr29" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr35" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr41" src="kreis_nichts.png" width="60" height="60"></td>
-                </tr>
-                <!--Reihe 2-->
-                <tr id="reihe2">
-                    <td><img id="arr4" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr10" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr16" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr22" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr28" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr34" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr40" src="kreis_nichts.png" width="60" height="60"></td>
-                </tr>
-                <!--Reihe 3-->
-                <tr id="reihe3">
-                    <td><img id="arr3" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr9" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr15" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr21" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr27" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr33" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr39" src="kreis_nichts.png" width="60" height="60"></td>
-                </tr>
+table {
+    background-color: #2391c8;
+    border-collapse: collapse;
+    border: 10px solid #0a5479;
+    border-radius: 10px;
+    margin: 0 auto;
+    transform: translateY(-50px);
+}
 
-                <!--Reihe 4-->
-                <tr id="reihe4">
-                    <td><img id="arr2" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr8" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr14" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr20" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr26" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr32" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr38" src="kreis_nichts.png" width="60" height="60"></td>
-                </tr>
+tr.dreieck th {
+    font-size: 25px;
+    color: #0ebee1;
+    padding: 10px;
+    cursor: pointer;
+}
 
-                <!--Reihe 5-->
-                <tr id="reihe5">
-                    <td><img id="arr1" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr7" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr13" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr19" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr25" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr31" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr37" src="kreis_nichts.png" width="60" height="60"></td>
-                </tr>
+tr.dreieck th.spalte-deaktiviert {
+    cursor: not-allowed;
+    user-select: none;
+}
 
-                <!--Reihe 6-->
-                <tr id="reihe6">
-                    <td><img id="arr0" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr6" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr12" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr18" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr24" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr30" src="kreis_nichts.png" width="60" height="60"></td>
-                    <td><img id="arr36" src="kreis_nichts.png" width="60" height="60"></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+td {
+    padding: 10px;
+}
 
-    <button id="neustartButton"> Neues Spiel </button>
-</body>
+img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
 
-<section id="kreis">
-    <div class="rot">
-        <img src="" alt="">
-    </div>
-</section>
-</html>
+#neustartButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #0ebee1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#neustartButton:hover {
+    background-color: #555555;
+}
+
+/* Die Bounce Animation ist noch in Bearbeitung, ich muss dafür sorgen, dass die Gelben und Roten Steine eine Bounce Animation bekommen - Jad */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Wende die Bounce-Animation auf die Spielsteinbilder an */
